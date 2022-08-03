@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript - NIOMIC</title>
+</head>
+<body>
+    <button type="button" onclick="Tugas()" name="button">Jalankan</button>
+    <input type="text" onclick="Tugas()">
+    <br>
+    <br>
+    <hr>
+    <b>Active Element</b> Property :
+    <br>
+    <p id="actelm">contoh</p>
+    <hr>
+    <b>addEventListener()</b> Property :
+    <br>
+    <p id="addevnlis">contoh</p>
+    <hr>
+    <b>Anchor</b> Property (<a name="jeruk" href="#">Jeruk</a> <a name="semangka" href="#">Semangka</a>) :
+    <p id="anch">contoh</p>
+    <hr>
+    <script>
+        function Tugas(){
+            var aktif = document.activeElement.tagName;
+            document.getElementById('actelm').innerHTML = aktif;
+            var event = document.addEventListener('click', function (){
+                document.getElementById('addevnlis').innerHTML = 'Sukses ! Merubah addEventListener()';
+            });
+            var anch = document.anchors.length;
+            document.getElementById('anch').innerHTML = anch;
+        }
+    </script>
+</body>
+</html>
